@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" type="X-icon" href="favicon.jpg">
+</head>
+
+<style>
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    padding: 30px;
+    width: 54%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+}
+
+
+.sub1{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.sub1sign{
+    width: 50%;
+    display: flex;
+    font-size: larger;
+    opacity: 0.8;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.sub1img{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin-right: 15px;  
+}
+
+.sub1img img{
+    cursor: pointer;
+    height: 12px;
+}
+
+.sub2 form{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+
+form h6{
+    text-transform: uppercase;
+    font-size: x-small;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+form input[type="text"],input[type="password"]{
+    background-color: #e8e4e4;
+    width: 90%;
+    padding: 10px;
+    border: none;
+    height: 18px;
+    border-radius: 25px;
+}
+
+form input[type="submit"]{
+    
+    width: 97%;
+    border: none;
+    margin: 10px 0;
+    margin-bottom: 10px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    height: 35px;
+    border-radius: 25px;
+    background-color: #ff4464;
+    cursor: pointer;
+}
+
+.sub3{
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"]{
+    color: white;
+    background-color: #ff4464;
+}
+
+
+span{
+    font-size: 10px;
+    align-items: center;
+}
+
+
+.span1{
+    align-items: center;  
+    margin-left: 5px;  
+    color: #ff4464;
+    font-weight: 600;
+}
+
+.span2{
+    margin-left: 100px;
+    color: #bab7b7;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.right {
+    gap: 10px;
+    /* margin-bottom: 50px; */
+    padding: 30px;
+    width: 54%;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 71, 100);
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.right h6{
+    font-size: 15px;
+    font-weight: 100;
+    opacity: .9;
+}
+
+.right button{
+    color: white;
+    width: 30%;
+    border-radius: 20px;
+    height: 35px;
+    align-items: center;
+    border: 1px solid white;
+    background-color: #ff4464;
+    cursor: pointer;
+}
+    
+
+</style>
+<body>
+
+    <div class="main">
+
+        <div class="left">
+
+           <div class="sub1"> 
+
+            <div class="sub1sign">Sign IN </div>
+
+            <div class="sub1img">
+                <img  src="C:\Users\vicky\OneDrive\Documents\Front_end_training\task-5\fb.png" alt="">
+                <img  src="C:\Users\vicky\OneDrive\Documents\Front_end_training\task-5\twitter.png" alt=""> 
+                </div>
+
+           </div>
+
+
+           <div class="sub2">
+            <form action="">
+
+            <h6>UserName</h6>
+            <input type="text" id="userName" placeholder="Username">
+            
+            <h6>Password</h6>
+            <input type="password" id="password" placeholder="Password">
+
+            <input type="submit" id="submitbtn" value="Sign in">
+            </form>
+           </div>
+
+           <div class="sub3">
+           
+            
+            <input type="checkbox" id="checkbox">
+            <span class="span1">Remember Me</span>
+            
+            <span class="span2">Forgot Password</span>
+           </div>
+
+
+        </div>
+
+        <div class="right">
+
+            <h1>Welcome to login</h1>
+            <h6> Don't have an account?</h6>
+
+            <button>Sign Up</button>
+
+        </div>
+    </div>
+
+    
+
+    <script>
+        var submit=document.getElementById('submitbtn').addEventListener('click',()=>{
+
+            let userName=document.getElementById('userName').value;
+
+            let password=document.getElementById('password').value;
+
+            if(userName.length>5 && password.length>5){
+                // console.log(Display.html);
+                location.href= 'Display.html';
+            }else{
+                alert('Enter Valid Inputs');
+            }
+        });
+    </script>
+</body>
+
+</html>
